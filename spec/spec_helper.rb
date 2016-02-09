@@ -1,3 +1,3 @@
-Dir['./challenge/*'].each do |file|
+Dir['./lib/*'].each do |file|
   require file
 end
