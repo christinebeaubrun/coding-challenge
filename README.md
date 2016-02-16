@@ -195,7 +195,7 @@ We could use the same item in multiple orders...
 => 2
 ```
 
-Finally, we'd be able to see the total revenue for that item accross all orders:
+Finally, we'd be able to see the total revenue for that item across all orders:
 
 ```ruby
 >> item.revenue
@@ -210,7 +210,7 @@ That code above seems wonderful, doesn't it? If only we had someone to implement
 
 Your job is to implement all of the new behavior above. You'll also want to ensure that each method (new and existing) is **still 100% unit tested**
 
-When you're done, make a commit and zip/tar up your repository. Then send us an email at jobs@josephine.com. We're looking forward to hearing from you!
+When you're done, make a *local* commit and zip/tar up your repository. Then send us an email at jobs@josephine.com. We're looking forward to hearing from you!
 
 ## Appendix – Reading List
 
