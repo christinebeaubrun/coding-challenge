@@ -31,4 +31,13 @@ describe Meal do
       expect(meal.revenue).to eql(60)
     end
   end
+
+  describe '#items' do
+    let(:meal) {Meal.new(title: 'Taste of the Islands: Haiti', price:15)}
+    let(:item) {Item.new(name: 'Fried Plantains', price: 8, meal: meal)}
+
+    it 'has item instances' do
+      expect(meal.items).to eql([])
+    end
+  end
 end
