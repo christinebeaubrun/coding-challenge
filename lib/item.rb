@@ -5,7 +5,6 @@ class Item
 		@name = options[:name]
 		@price = options[:price]
 		@meal = options[:meal]
-
 		@meal.items << self
 	end
 end
