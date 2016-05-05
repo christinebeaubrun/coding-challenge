@@ -1,17 +1,19 @@
+require 'pry'
+
 class Order
   attr_accessor :quantity, :meal, :line_items, :items
 
   def initialize(options = {})
     @quantity = 0
     @meal = options[:meal]
-    @meal.orders << self
+    @meal.add_order( self )
     @line_items = options[:line_items] || []
     @items = []
-    if @line_items.count >= 1
-	    add_self_to_line_items_order
-	    calculate_line_items_quantity
-	    add_item_to_items_array
-    end
+
+    add_self_to_line_items_order
+
+    calculate_line_items_quantity
+    add_item_to_items_array
   end
 
   def revenue

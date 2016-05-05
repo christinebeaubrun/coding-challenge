@@ -18,17 +18,19 @@ describe Meal do
   end
 
   describe '#revenue' do
-    let(:meal) { Meal.new(title: 'Jamaican Jerk Chicken', price: 12) }
+    meal = Meal.new(title: 'Jamaican Jerk', price: 12)
 
     it 'is zero when there are no orders' do
-      # expect(meal.revenue).to eql(0)
+      expect(meal.revenue).to eql(0)
     end
 
     it 'is equal to the sum of the revenue of all the orders' do
-      Order.new(quantity: 3, meal: meal)
-      Order.new(quantity: 2, meal: meal)
+      item1 = Item.new(name: 'Fried Plantains', price: 8, meal: meal)
+      item2 = Item.new(name: 'Fried Plantains', price: 8, meal: meal)
 
-      # expect(meal.revenue).to eql(60)
+      Order.new(meal: meal, line_items: [ { item: item1, quantity: 1 }, { item: item2, quantity: 1 }])
+
+      expect(meal.revenue).to eql(16)
     end
   end
 
